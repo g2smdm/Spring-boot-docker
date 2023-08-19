@@ -14,7 +14,7 @@ steps {
 
 // Run Maven on a Unix agent.
 // sh "mvn -Dmaven.test.failure.ignore=true clean package"
-
+bat "set PATH=%PATH%;C:\Users\dhyan\Downloads\apache-maven-3.9.4-bin\apache-maven-3.9.4
 // To run Maven on a Windows agent, use
 bat "mvn -Dmaven.test.failure.ignore=true clean package"
 }
