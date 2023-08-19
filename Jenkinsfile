@@ -2,11 +2,13 @@ pipeline {
 agent any
 
 stages {
-
-stage('Clone') {
+stage('Checkout') {
 steps {
-// Get some code from a GitHub repository
-git 'https://github.com/g2smdm/Spring-boot-docker.git'
+checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'git', url: 'https://github.com/g2smdm/Spring-boot-docker.git']]])
+bat dir
+}
+  
+}
 }
 
 }
