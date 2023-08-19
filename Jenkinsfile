@@ -7,9 +7,6 @@ steps {
 checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'git', url: 'https://github.com/g2smdm/Spring-boot-docker.git']]])
 bat dir
 }
-  
-}
-}
 
 }
 
