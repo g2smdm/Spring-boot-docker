@@ -26,7 +26,7 @@ stage("Docker package"){
 }
 stage("Docker run"){
   steps{
-    bat 'docker run -it -d jenkinsdocker'
+    bat 'docker run -it -p 8585:8080 -d jenkinsdocker'
   }
 }
 }
