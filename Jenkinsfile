@@ -24,5 +24,10 @@ stage("Docker package"){
     bat 'docker build  -t jenkinsdocker .'
   }
 }
+stage("Docker run"){
+  steps{
+    bat 'docker run -it -d jenkinsdocker'
+  }
+}
 }
 }
